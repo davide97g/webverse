@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+server.log
+*.log
+
+# Per-user workspace: your mods, page snapshots, screenshots and Claude sessions.
+# Contains personal data from the sites you browse. Never commit it.
+sites/

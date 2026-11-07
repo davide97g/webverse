@@ -1,0 +1,15 @@
+{
+  "name": "webverse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reshape any website by chatting with a local Claude Code. Chrome extension + local bridge to `claude -p`.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/server.mjs",
+    "check": "node --check server/server.mjs && for f in extension/*.js; do node --check \"$f\" || exit 1; done && node -e \"JSON.parse(require('fs').readFileSync('extension/manifest.json','utf8'))\" && echo ok"
+  },
+  "license": "MIT"
+}
